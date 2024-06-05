@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+ 
+@font-face {
+    font-family: 'Inter';
+    src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf) format('truetype');
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark_Grey: hsl(0, 0%, 12%);
+    --Off_Black: hsl(0, 0%, 8%);
+    --Green: #378CE7;
+}
+
+body {
+    background-color: var(--Off_Black);
+    color: var(--White);
+}
+
+.container {
+    width: 85%;
+    max-width: 400px;
+    max-height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--Dark_Grey);
+    border-radius: 10px;
+}
+
+.profile,
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 7% 0 3%;
+}
+
+.links {
+    margin: 4%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--White);
+    font-weight: 700;
+    background-color: var(--Grey);
+    width: 92%;
+    border-radius: 5px;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: var(--Green);
+    color: var(--Off_Black);
+    padding: 17px 0;
+}
+
+.links:hover a:not(:hover) {
+    padding: 13px 0;
+}
+
+.profile span:nth-child(2) {
+    font-size: 1.3em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.profile span:nth-child(3) {
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+    color: var(--Green);
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.profile span:nth-child(4) {
+    margin: 20px 0 -15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+@media (min-width: 1440px) {
+    body {
+        width: 90vw;
+        height: 80vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    html {
+        background-image: url(./images/38045236-9f97-4dca-96a4-e98e1e0b6262.jpg);
+        background-size: cover;
+    }
+}
+@import url('https://fonts.google.com/specimen/Inter');
+.attribution { font-size: 11px; text-align: center; visibility: hidden;}
+.attribution span { color: hsl(228, 45%, 44%); }
